@@ -18,3 +18,6 @@ conda env create -f environment.yml
 source activate ucu-2019-ml-final-project
 python -m ipykernel install --user --name myenv --display-name "ucu-2019-ml-final-project"
 ```
+
+### Data:
+Put __train.csv__ and __sample_submission.csv__ to data folder.
