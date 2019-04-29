@@ -1,0 +1,35 @@
+name: ucu-2019-ml-final-project
+channels:
+  - conda-forge
+dependencies:
+  - scikit-learn
+  - umap-learn
+  - pkg-config
+  - pandas=0.23.0
+  - py-xgboost
+  - cython>=0.27.3
+  - pip:
+    - fuzzywuzzy
+    - python-Levenshtein
+    - minio
+    - s3fs
+    - nltk
+    - msgpack<0.6.0
+    - gensim
+    - toolz
+    - dask[complete]
+    - distributed
+    - bokeh
+    - matplotlib
+    - joblib
+    - fastdtw
+    - similaritymeasures
+    - Shapely>=1.6.4
+    - Geohash==1.0
+    - spacy
+    - keras
+    - tensorflow
+    - hyperopt
+    - plotly
+    - seaborn
+    - hyperas
