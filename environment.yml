@@ -33,3 +33,4 @@ dependencies:
     - plotly
     - seaborn
     - hyperas
+    - ipykernel
