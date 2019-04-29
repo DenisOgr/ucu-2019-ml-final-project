@@ -20,4 +20,4 @@ python -m ipykernel install --user --name myenv --display-name "ucu-2019-ml-fina
 ```
 
 ### Data:
-Put __train.csv__ and __sample_submission.csv__ to data folder.
+Put __train.csv__ and __sample_submission.csv__ to __data/__ folder.
