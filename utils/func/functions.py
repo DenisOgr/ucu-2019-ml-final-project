@@ -35,17 +35,41 @@ def build_x(X, data_type, data_folder):
 
     X = add_column(X, 'sqeuclidean', data_type=data_type, data_folder=data_folder)
 
-    # X = add_d2v_columns(X, 'd2v_1_10', data_type=data_type, data_folder='none')
+    #graph
+    X = add_column(X, 'clique_size', data_type=data_type, data_folder=data_folder)
 
-    # X = add_fz_column(X, 'size_diff', data_type=data_type, data_folder=data_folder)
-    #
-    # X = add_fz_column(X, 'ratio',  data_type=data_type, data_folder=data_folder)
-    #
-    # X = add_fz_column(X, 'partial_ratio',  data_type=data_type, data_folder=data_folder)
-    #
-    # X = add_fz_column(X, 'token_sort_ratio',  data_type=data_type, data_folder=data_folder)
-    #
-    # X = add_fz_column(X, 'token_set_ratio',  data_type=data_type, data_folder=data_folder)
+    #fuzzy and distances
+    X = add_column(X, 'cosine_distance', data_type=data_type, data_folder=data_folder)
+
+    X = add_column(X, 'cityblock_distance', data_type=data_type, data_folder=data_folder)
+
+    X = add_column(X, 'jaccard_distance', data_type=data_type, data_folder=data_folder)
+
+    X = add_column(X, 'canberra_distance', data_type=data_type, data_folder=data_folder)
+
+    X = add_column(X, 'euclidean_distance', data_type=data_type, data_folder=data_folder)
+
+    X = add_column(X, 'minkowski_distance', data_type=data_type, data_folder=data_folder)
+
+    X = add_column(X, 'braycurtis_distance', data_type=data_type, data_folder=data_folder)
+
+    X = add_column(X, 'len_diff', data_type=data_type, data_folder=data_folder)
+
+    X = add_column(X, 'token_sort_ratio', data_type=data_type, data_folder=data_folder)
+
+    X = add_column(X, 'token_ratio', data_type=data_type, data_folder=data_folder)
+
+    X = add_column(X, 'intersection_ratio', data_type=data_type, data_folder=data_folder)
+
+    X = add_column(X, 'token_set_ratio', data_type=data_type, data_folder=data_folder)
+
+    X = add_column(X, 'partial_ratio', data_type=data_type, data_folder=data_folder)
+
+    X = add_column(X, 'n_capital_letters_diff', data_type=data_type, data_folder=data_folder)
+
+    X = add_column(X, 'n_question_marks_diff', data_type=data_type, data_folder=data_folder)
+
+
     return X.drop(columns=['question1', 'question2', 'qid1', 'qid2']).dropna()
 
 def pickle_and_remove(obj, file, data_folder):
