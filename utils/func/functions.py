@@ -134,7 +134,7 @@ def plot_roc(fpr, tpr, roc_auc):
     df_worst['true positive rate'] = pd.Series(fpr)
     df_worst['curve'] = 'random guess'
     df = pd.concat([df_real, df_ideal, df_worst])
-    pal = {'model': "#3498db", 'random guess':"#e74c3c", 'ideal':"#34495e"}
+    pal = {'model': "#a6bddb", 'random guess':"#fc9272", 'ideal':"#1c9099"}
     ax = sns.relplot('false positive rate', 'true positive rate', hue='curve', data=df,
                 linewidth=2.0, palette=pal, kind="line", legend='full', height=5, aspect=7/5)
     ax.set(xlim=(-.05, 1.0), ylim=(0.0, 1.05), title='Receiver operating characteristic\n(area under curve = %0.2f)' % roc_auc)
